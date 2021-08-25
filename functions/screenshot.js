@@ -129,7 +129,9 @@ async function handler(event, context) {
     }
 
     let output = await screenshot(url, format, viewport, dpr);
+  
 
+    const screenshot = await up(output)
     // output to Function logs
     console.log(url, format, { viewport }, { size }, { dpr }, { aspectratio });
 
